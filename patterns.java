@@ -249,6 +249,38 @@ public class patterns {
         }
     }
 
+    public static void pattern20(int n){
+	    for (int row = 1; row <= 2 * n - 1; row++){
+		    int times = (row <= n)? row: (n - (row % n));
+		    for (int col = 1; col <= times; col++){
+			    System.out.print("*");
+		    }
+		    System.out.println();
+	    }
+    }
+
+    public static void pattern21(int n){
+	    for (int row = 1; row <= 2 * n - 1; row++){
+		    int stars;
+		    int spaces;
+		    if(row <= n){
+			    spaces = n - row;
+			    stars = row;
+		    }
+		    else{
+			    spaces = (row % n);
+			    stars = n - (row % n);
+		    }
+		    for (int sp = 1; sp <= spaces; sp++){
+			    System.out.print(" ");
+		    }
+		    for (int col = 1; col <= stars; col++){
+			    System.out.print("*");
+		    }
+		    System.out.println();
+	    }
+    }
+
     public static void patternPrinter(int patternNo, int n) {
         switch (patternNo) {
             case 1 -> pattern1(n);
@@ -270,6 +302,9 @@ public class patterns {
             case 17 -> pattern17(n);
             case 18 -> pattern18(n);
             case 19 -> pattern19(n);
+	    case 20 -> pattern20(n);
+	    case 21 -> pattern21(n);
         }
+    
     }
 }
