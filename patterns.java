@@ -302,8 +302,8 @@ public class patterns {
             case 17 -> pattern17(n);
             case 18 -> pattern18(n);
             case 19 -> pattern19(n);
-	    case 20 -> pattern20(n);
-	    case 21 -> pattern21(n);
+	        case 20 -> pattern20(n);
+	        case 21 -> pattern21(n);
         }
     
     }
